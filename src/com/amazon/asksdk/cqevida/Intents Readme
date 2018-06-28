@@ -1,0 +1,85 @@
+FUNCTIONS THAT USE THE GENERIC REQUEST FRAMEWORK:
+
+
+Sample Phrase: "Alexa, ask C I P generic get first"
+
+Structure:  ask C I P generic get first
+
+Returns: the number of quote requests made by Michael Connolly and the display name of the first such quoterequest.
+
+
+
+
+
+Sample Phrase: "Alexa, ask c i p to make a generic dari query quote request between October 1st 2017 and February 5th 2018"
+
+Structure: ask c i p to make a generic dari query {primaryContentType} between {StartDate} and {EndDate}
+
+Returns: The number of the specified class of object created in the database between startdate and enddate.
+
+
+
+
+
+Sample Phrase: "Alexa, ask c i p to make a generic request"
+"Quote Request" "count" "created Date" "3 years ago" "today" "yes" "Display Name" "Michael Connolly" "no"
+
+Structure: "ask c i p to make a generic request"
+"{primaryContentType}" "{result}" "{nameOfDateVariable}" "{startDate}" "{endDate}" "{Are they any more conditions}" "{Condition Field}" "{Condition Value}" "{Are there any more conditions}...etc."
+
+Returns: Writes a full dari query using the generic framework.
+
+
+
+
+
+FUNCTIONS THAT USE CUSTOM REQUESTS(specifically written into the servlet):
+
+
+Sample Phrase: "Alexa, ask c i p how many quotes were issued by Isure between october 1st 2017 and december 2nd 2018"
+
+Structure: "ask c i p how many quotes were issued by {Name of Insurer} between {startDate} and {endDate}"
+
+Returns: number of quotes from insurer between 2 dates
+
+
+
+
+
+Sample Phrase: "ask c i p what is the number of quotes given between October 1st 2017 and February 5th 2018"
+
+Structure: "ask c i p how many quotes were issued  between {startDate} and {endDate}"
+
+Returns: number of quotes issued between 2 dates
+
+
+
+
+
+Sample Phrase: "ask c i p how many quotes were issued in the retail sector"
+
+Structure: "ask c i p how many quotes were issued in the {sector name} sector"
+
+Returns: number of quotes issued in a sector/type.
+
+
+
+
+
+Sample Phrase: "ask c i p how much did Isure make between October 1st 2017 and February 5th 2018"
+
+Structure: "ask c i p how much did {insurer} make between {startDate} and {endDate}"
+
+Returns: total of discounted revenue from each record with "sold" status issued between two dates by a specific insurer.
+
+
+
+
+
+Sample Phrase: "ask c i p what was the total revenue of all insurers between October 1st 2017 and February 5th 2018"
+
+Structure: "ask c i p what was the total revenue of all insurers between {startDate} and {endDate}"
+
+Returns: total of discounted revenue from each record with "sold" status issued between two dates.
+
+

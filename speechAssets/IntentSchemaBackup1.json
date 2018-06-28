@@ -1,0 +1,605 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "Insurer",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "Isure",
+              "synonyms": [
+                "Isure's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Allianz",
+              "synonyms": [
+                "Allianz's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "AIG",
+              "synonyms": [
+                "AIG's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Aviva",
+              "synonyms": [
+                "Aviva's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "AXA",
+              "synonyms": [
+                "AXA's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Zurich",
+              "synonyms": [
+                "Zurich's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Optis",
+              "synonyms": [
+                "Optis's"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "RSA",
+              "synonyms": [
+                "RSA's"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sector",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "Office",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Retail",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Commercial Property",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Residential Property",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Business Guard Plus",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Tradesman",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "launch",
+        "samples": [
+          "launch",
+          "begin",
+          "start",
+          "launch vida"
+        ],
+        "slots": []
+      },
+      {
+        "name": "requestNumberOfQuotesByInsurerAndTime",
+        "samples": [
+          "what is the number of quotes from {insurer} between {startDate} and {endDate}",
+          "how many quotes did {insurer} give between {startDate} and {endDate}",
+          "what is the number of quotes given by {insurer} between {startDate} and {endDate}",
+          "what is the number of quotes given by the company {insurer} between {startDate} and {endDate}",
+          "what is the number of quotes given out by {insurer} between {startDate} and {endDate}",
+          "what is the number of quotes given out by the company {insurer} between {startDate} and {endDate}",
+          "how many quotes did the company {insurer} give between {startDate} and {endDate}",
+          "how many quotes did an insurer make",
+          "get me the number of quotes issued by an insurer",
+          "get me the number of quotes issued by a company"
+        ],
+        "slots": [
+          {
+            "name": "insurer",
+            "type": "Insurer",
+            "samples": [
+              "{insurer}"
+            ]
+          },
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{startDate}"
+            ]
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{endDate}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "requestNumberOfQuotesBySector",
+        "samples": [
+          "how many quotes were issued in the {sector} sector",
+          "how many quotes were issued in {sector}",
+          "how many quotes are on offer in {sector}",
+          "how many quotes in the {sector} sector",
+          "how many quotes in {sector}",
+          "how many quotes in a sector",
+          "get me the number of quotes issued for a sector"
+        ],
+        "slots": [
+          {
+            "name": "sector",
+            "type": "Sector",
+            "samples": [
+              "{sector}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "requestNumberOfQuotesByTime",
+        "samples": [
+          "how many quotes did were issued between {startDate} and {endDate}",
+          "how many quotes did were given out between {startDate} and {endDate}",
+          "how many quotes did were given between {startDate} and {endDate}",
+          "what is the number of quotes given between {startDate} and {endDate}",
+          "what is the number of quotes given out between {startDate} and {endDate}",
+          "what is the number of quotes issued between {startDate} and {endDate}",
+          "how many quotes were made between times",
+          "get me the number of quotes issued between two dates"
+        ],
+        "slots": [
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{startDate}"
+            ]
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{endDate}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "requestRevenueByInsurerAndTime",
+        "samples": [
+          "what was {insurer} revenue between {startDate} and {endDate}",
+          "how much did {insurer} make between {startDate} and {endDate}",
+          "what was the company {insurer} revenue between {startDate} and {endDate}",
+          "how much did a company make",
+          "get me the revenue for an insurer"
+        ],
+        "slots": [
+          {
+            "name": "insurer",
+            "type": "Insurer",
+            "samples": [
+              "{insurer}"
+            ]
+          },
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{startDate}"
+            ]
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{endDate}"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "requestRevenueByTime",
+        "samples": [
+          "What was the total revenue of all insurers between {startDate} and {endDate}",
+          "What was the total revenue that passed through CIT between {startDate} and {endDate}",
+          "How much money went through CIT between {startDate} and {endDate}",
+          "What was CIT's total revenue between {startDate} and {endDate}",
+          "how much was made between times",
+          "get me the revenue between two dates"
+        ],
+        "slots": [
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{startDate}"
+            ]
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "samples": [
+              "{endDate}"
+            ]
+          }
+        ]
+      }
+    ],
+    "invocationName": "cit"
+  },
+  "prompts": [
+    {
+      "id": "Confirm.Intent-requestNumberOfQuotesByInsurerAndTime",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Did you want the number of quotes from {insurer} between {startDate} and {endDate}?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestNumberOfQuotesByInsurerAndTime.IntentSlot-insurer",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but who was the insurer?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestNumberOfQuotesByInsurerAndTime.IntentSlot-startDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the earliest date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestNumberOfQuotesByInsurerAndTime.IntentSlot-endDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the last date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-requestNumberOfQuotesBySector",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Do you want the number of quotes in the {sector} sector?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestNumberOfQuotesBySector.IntentSlot-sector",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what sector did you say?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-requestNumberOfQuotesByTime",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Did you want the number of quotes issued between {startDate} and {endDate}?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestNumberOfQuotesByTime.IntentSlot-startDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the earliest date again?"
+        },
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the last date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestNumberOfQuotesByTime.IntentSlot-endDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the last date, again?"
+        },
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the last date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-requestRevenueByInsurerAndTime",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Do you want the revenue of {insurer} between {startDate} and {endDate}?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestRevenueByInsurerAndTime.IntentSlot-insurer",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry, but who was the insurer?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestRevenueByInsurerAndTime.IntentSlot-startDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the earliest date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestRevenueByInsurerAndTime.IntentSlot-endDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the last date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Confirm.Intent-requestRevenueByTime",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Did you want the total revenue made by all companies on CIT between {startDate} and {endDate}?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestRevenueByTime.IntentSlot-startDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the earliest date for your search?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-requestRevenueByTime.IntentSlot-endDate",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "I'm sorry but what was the last date for your search?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "intents": [
+      {
+        "name": "requestNumberOfQuotesByInsurerAndTime",
+        "confirmationRequired": true,
+        "prompts": {
+          "confirmation": "Confirm.Intent-requestNumberOfQuotesByInsurerAndTime"
+        },
+        "slots": [
+          {
+            "name": "insurer",
+            "type": "Insurer",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestNumberOfQuotesByInsurerAndTime.IntentSlot-insurer"
+            }
+          },
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestNumberOfQuotesByInsurerAndTime.IntentSlot-startDate"
+            }
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestNumberOfQuotesByInsurerAndTime.IntentSlot-endDate"
+            }
+          }
+        ]
+      },
+      {
+        "name": "requestNumberOfQuotesBySector",
+        "confirmationRequired": true,
+        "prompts": {
+          "confirmation": "Confirm.Intent-requestNumberOfQuotesBySector"
+        },
+        "slots": [
+          {
+            "name": "sector",
+            "type": "Sector",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestNumberOfQuotesBySector.IntentSlot-sector"
+            }
+          }
+        ]
+      },
+      {
+        "name": "requestNumberOfQuotesByTime",
+        "confirmationRequired": true,
+        "prompts": {
+          "confirmation": "Confirm.Intent-requestNumberOfQuotesByTime"
+        },
+        "slots": [
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestNumberOfQuotesByTime.IntentSlot-startDate"
+            }
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestNumberOfQuotesByTime.IntentSlot-endDate"
+            }
+          }
+        ]
+      },
+      {
+        "name": "requestRevenueByInsurerAndTime",
+        "confirmationRequired": true,
+        "prompts": {
+          "confirmation": "Confirm.Intent-requestRevenueByInsurerAndTime"
+        },
+        "slots": [
+          {
+            "name": "insurer",
+            "type": "Insurer",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestRevenueByInsurerAndTime.IntentSlot-insurer"
+            }
+          },
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestRevenueByInsurerAndTime.IntentSlot-startDate"
+            }
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestRevenueByInsurerAndTime.IntentSlot-endDate"
+            }
+          }
+        ]
+      },
+      {
+        "name": "requestRevenueByTime",
+        "confirmationRequired": true,
+        "prompts": {
+          "confirmation": "Confirm.Intent-requestRevenueByTime"
+        },
+        "slots": [
+          {
+            "name": "startDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestRevenueByTime.IntentSlot-startDate"
+            }
+          },
+          {
+            "name": "endDate",
+            "type": "AMAZON.DATE",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-requestRevenueByTime.IntentSlot-endDate"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
